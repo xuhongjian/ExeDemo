@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal" 
+    android:background="#17B3ED">
+    
+    <LinearLayout android:id="@+id/lay_left" 
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.2"
+        android:paddingLeft="10dp">
+        <ImageView android:id="@+id/btn_left" 
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center_vertical"
+        	android:background="@drawable/head_more_button_select"/>
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.6">
+        <TextView android:id="@+id/tv_title" 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="掌上考试"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+    </LinearLayout>
+    
+    <RelativeLayout android:id="@+id/lay_right"  
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="0.2"
+        android:paddingRight="10dp"
+        android:visibility="invisible">
+        <Button android:id="@+id/btn_right"  
+            android:layout_width="wrap_content"
+        	android:layout_height="30dp"
+        	android:layout_alignParentRight="true"
+        	android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>
