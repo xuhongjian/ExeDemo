@@ -5,6 +5,8 @@ import com.example.exedemo.R;
 import com.example.exedemo.db.LocalDBInterface;
 import com.example.exedemo.entity.User;
 import com.example.exedemo.entity.User.ROLE;
+import com.example.exedemo.manager.StudentManager;
+import com.example.exedemo.manager.TeacherManager;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ContentView;
 import com.lidroid.xutils.view.annotation.ViewInject;
@@ -59,8 +61,10 @@ public class LoginActivity extends Activity {
 		
 		if("teacher".equals(userName)){
 			ExeApplication.currentUser.setRole(ROLE.TEACHER.value);
+			ExeApplication.currentUser.setManager(new TeacherManager());
 		} else if("student".equals(userName)){
 			ExeApplication.currentUser.setRole(ROLE.STUDENT.value);
+			ExeApplication.currentUser.setManager(new StudentManager());
 		}
 		
 		ExeApplication.currentUser.setName(userName);

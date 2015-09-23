@@ -2,6 +2,8 @@ package com.example.exedemo.entity;
 
 import java.util.ArrayList;
 
+import com.example.exedemo.entity.TestPaper.TYPE;
+
 /**
  * 学生考试用的试卷
  * @author xhj
@@ -33,6 +35,10 @@ public class StudentTestPaper extends TestPaper{
 		return statu;
 	}
 
+	public String getStatuStr() {
+		return getStatuStr(statu);
+	}
+	
 	public void setStatu(int statu) {
 		this.statu = statu;
 	}
@@ -67,5 +73,21 @@ public class StudentTestPaper extends TestPaper{
 
 	public void setMyAnswers(ArrayList<MyAnswer> myAnswers) {
 		this.myAnswers = myAnswers;
+	}
+	
+	public static String getStatuStr(int statu){
+		if(statu == STATU.NOEXAM.value){
+			return "未考";
+		}
+		if(statu == STATU.EXAMED.value){
+			return "已考";
+		}
+		if(statu == STATU.PASSTIME.value){
+			return "过期";
+		}
+		if(statu == STATU.EXAMING.value){
+			return "考试中";
+		}
+		return "";
 	}
 }

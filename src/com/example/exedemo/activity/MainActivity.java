@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
 		ViewUtils.inject(this);
 		initLeftMenu();
 		initLeftMenuClickEvent();
-		
+//		ExeApplication.currentUser.getManager()
 	}
 
 	private void initLeftMenu(){

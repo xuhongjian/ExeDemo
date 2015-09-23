@@ -45,6 +45,9 @@ public class TestPaper {
 	public int getTestType() {
 		return testType;
 	}
+	public String getTestTypeStr() {
+		return getTypeName(testType);
+	}
 	public void setTestType(int testType) {
 		this.testType = testType;
 	}
@@ -109,5 +112,19 @@ public class TestPaper {
 		this.flag = flag;
 	}
 	
-	
+	public static String getTypeName(int type){
+		if(type ==  TYPE.LANGUAGE.value){
+			return "语文";
+		}
+		if(type ==  TYPE.MATH.value){
+			return "数学";
+		}
+		if(type ==  TYPE.POLITICS.value){
+			return "政治";
+		}
+		if(type ==  TYPE.GEOGRAPHY.value){
+			return "地理";
+		}
+		return "";
+	}
 }

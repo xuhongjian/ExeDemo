@@ -1,6 +1,7 @@
 package com.example.exedemo.entity;
 
 import com.example.exedemo.ExeApplication;
+import com.example.exedemo.manager.UserManager;
 import com.lidroid.xutils.db.annotation.Table;
 
 @Table(name = "User")
@@ -33,6 +34,8 @@ public class User {
 	private int age;
 	private int sex;
 	private int role;
+	
+	private UserManager manager;
 	
 	public User(){}
 
@@ -98,5 +101,13 @@ public class User {
 
 	public void setRole(int role) {
 		this.role = role;
+	}
+
+	public UserManager getManager() {
+		return manager;
+	}
+
+	public void setManager(UserManager manager) {
+		this.manager = manager;
 	}
 }
